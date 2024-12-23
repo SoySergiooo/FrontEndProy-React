@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
 import './headerStyle.css';
 
 // Importa las imágenes desde la carpeta src/assets/images
@@ -19,9 +20,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo-container">
-        <a href="/index.html">
+        <Link to="/">
           <img src={LogoMochila} alt="Logo" className="logo" />
-        </a>
+        </Link>
       </div>
       <form action="" method="POST" className="search-form">
         <input
@@ -37,14 +38,14 @@ const Header = () => {
       <nav>
         <ul>
           <li className="icon" id="icono-ubicacion">
-            <a href="#Ubicanos">
+            <Link to="#Ubicanos">
               <img src={Ubicacion} alt="Ubicanos" className="icono-ubicacion" />
-            </a>
+            </Link>
           </li>
           <li className="icon" id="icono-login">
-            <a href="/login.html">
+            <Link to="/login">
               <img src={Login} alt="Login" className="icono-carrito-vacio" />
-            </a>
+            </Link>
           </li>
           <li className="icon" id="icono-logout">
             <a href="#" onClick={cerrarSesion}>
@@ -52,14 +53,14 @@ const Header = () => {
             </a>
           </li>
           <li className="icon" id="icono-carrito-vacio">
-            <a href="/carrito-empty.html">
+            <Link to="/carrito-empty">
               <img src={CartEmpty} alt="Carrito Vacio" className="icono-carrito-vacio" />
-            </a>
+            </Link>
           </li>
           <li className="icon" id="icono-carrito-lleno">
-            <a href="/carrito.html">
+            <Link to="/carrito">
               <img src={CartFull} alt="Carrito Full" className="icono-carrito-full" />
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

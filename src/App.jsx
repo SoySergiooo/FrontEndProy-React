@@ -1,4 +1,39 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/headerComponente'; // Ajusta las rutas según tu proyecto
+import Home from './views/Home'; // Página principal
+import NotFound from './views/NotFound'; // Página de error 404
+
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/carrito" element={<Carrito />} /> */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* import React from 'react';
 import Header from './components/headerComponente'; // Ajusta la ruta según la ubicación de tu componente
 import Banner from './components/bannerComponente'; // Importa el componente del banner
 import Filtros from './components/filtrosComponente'; // Importa el componente de los filtros
@@ -17,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; */
