@@ -1,0 +1,105 @@
+/* Estilo del contenedor del catálogo */
+.wrap-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro elementos por fila */
+    gap: 20px; /* Espaciado entre elementos */
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+/* Estilo de cada producto */
+.art-producto {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: default;
+}
+
+.imagen {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f8f8f8; /* Fondo gris claro para imágenes sin carga */
+}
+
+.imagen img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.art-producto h2 {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.art-producto h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.art-producto p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.art-producto .precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 10px;
+}
+
+.BotonAgregarCarrito {
+    background-color: #333;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.BotonAgregarCarrito:hover {
+    background-color: #444;
+}
+
+/* ====== Media Queries ====== */
+
+@media (max-width: 1200px) {
+    .wrap-productos {
+        grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas */
+    }
+}
+
+@media (max-width: 900px) {
+    .wrap-productos {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+    }
+}
+
+@media (max-width: 600px) {
+    .wrap-productos {
+        grid-template-columns: 1fr; /* Cambia a 1 columna */
+    }
+}

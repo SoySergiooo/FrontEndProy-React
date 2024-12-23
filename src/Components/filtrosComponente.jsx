@@ -1,23 +1,47 @@
 import React from 'react';
 import './filtrosStyle.css';
 
-const Filtros = () => {
+const Filtros = ({ onFilterChange }) => {
   return (
     <section id="filtros">
       <nav className="section-nav">
         <div id="opciones-productos">
           <ul>
             <li>
-              <button id="btn-hombre" className="btn-filter">Hombres</button>
+              <button
+                id="btn-hombre"
+                className="btn-filter"
+                onClick={() => onFilterChange('Hombre')}
+              >
+                Hombres
+              </button>
             </li>
             <li>
-              <button id="btn-mujer" className="btn-filter">Mujeres</button>
+              <button
+                id="btn-mujer"
+                className="btn-filter"
+                onClick={() => onFilterChange('Mujer')}
+              >
+                Mujeres
+              </button>
             </li>
             <li>
-              <button id="btn-nino" className="btn-filter">Niños</button>
+              <button
+                id="btn-nino"
+                className="btn-filter"
+                onClick={() => onFilterChange('Niño')}
+              >
+                Niños
+              </button>
             </li>
             <li>
-              <button id="btn-todos" className="btn-filter">Todos</button>
+              <button
+                id="btn-todos"
+                className="btn-filter"
+                onClick={() => onFilterChange('Todos')}
+              >
+                Todos
+              </button>
             </li>
           </ul>
         </div>

@@ -1,15 +1,17 @@
-import React from 'react';
-import Banner from '../components/bannerComponente'; // Ajusta la ruta según la estructura de tu proyecto
-import Filtros from '../components/filtrosComponente'; // Ajusta la ruta según la estructura de tu proyecto
+import React, { useState } from 'react';
+import Banner from '../components/bannerComponente';
+import Filtros from '../components/filtrosComponente';
+import Catalogo from '../components/catalogoComponente';
 
 const Home = () => {
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todos');
+
   return (
     <div>
       <Banner />
-      <Filtros />
+      <Filtros onFilterChange={setCategoriaSeleccionada} />
       <main>
-        <h1>Bienvenido a mi aplicación</h1>
-        <p>Esta es una página de ejemplo.</p>
+        <Catalogo categoria={categoriaSeleccionada} />
       </main>
     </div>
   );
