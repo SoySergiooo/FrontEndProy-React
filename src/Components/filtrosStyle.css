@@ -1,0 +1,59 @@
+#filtros {
+    width: 100%; /* Asegura que la sección abarque todo el ancho */
+    padding: 10px 0; /* Espaciado arriba y abajo */
+    background-color: #f1f1f1; /* Fondo para distinguir los filtros */
+    border-bottom: 1px solid #ccc; /* Límite inferior */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+.section-nav {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+}
+
+#opciones-productos {
+    display: flex; /* Asegura que los botones se alineen en fila */
+    justify-content: center; /* Centra horizontalmente los botones */
+    align-items: center; /* Asegura que estén centrados verticalmente */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina paddings predeterminados */
+    list-style: none; /* Elimina los puntos de lista */
+}
+
+#opciones-productos li {
+    list-style: none; /* Elimina los puntos de lista */
+    display: inline-block; /* Asegura que los botones no se comporten como bloques */
+    margin: 0 10px; /* Agrega separación horizontal entre los botones */
+}
+
+.btn-filter {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.btn-filter:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.btn-filter:active {
+    background-color: #0056b3;
+    border-color: #004085;
+    transform: scale(0.95);
+}
+
+.btn-filter.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+}
