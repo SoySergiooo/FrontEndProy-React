@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/headerComponente'; // Ajusta las rutas según tu proyecto
 import Home from './views/Home'; // Página principal
 import NotFound from './views/NotFound'; // Página de error 404
+import Carrito from './views/Carrito';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/carrito" element={<Carrito />} /> */}
+        <Route path="/carrito" element={<Carrito />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

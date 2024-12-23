@@ -118,19 +118,21 @@ return (
 );
 };
 
+
+
 const agregarAlCarrito = (producto) => {
-let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-const productoExistente = carrito.find((item) => item.id === producto.id);
-
-if (productoExistente) {
-productoExistente.cantidad += 1;
-alert(`Se agregó otra unidad de "${producto.nombre}" al carrito.`);
-} else {
-carrito.push({ ...producto, cantidad: 1 });
-alert(`Producto "${producto.nombre}" agregado al carrito.`);
-}
-
-localStorage.setItem('carrito', JSON.stringify(carrito));
-};
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const productoExistente = carrito.find((item) => item.id === producto.id);
+  
+    if (productoExistente) {
+      productoExistente.cantidad += 1;
+      alert(`Se agregó otra unidad de "${producto.nombre}" al carrito.`);
+    } else {
+      carrito.push({ ...producto, cantidad: 1, linkimg: producto.linkimg });
+      alert(`Producto "${producto.nombre}" agregado al carrito.`);
+    }
+  
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+  };
 
 export default Catalogo;

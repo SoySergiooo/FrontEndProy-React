@@ -24,17 +24,7 @@ const Header = () => {
           <img src={LogoMochila} alt="Logo" className="logo" />
         </Link>
       </div>
-      <form action="" method="POST" className="search-form">
-        <input
-          type="text"
-          name="Buscador"
-          id="input_buscador"
-          defaultValue="Buscar Producto"
-        />
-        <button type="submit" name="boton-buscador" id="boton-buscador">
-          <img src={SearchIcon} alt="Buscar" className="icon-buscar" />
-        </button>
-      </form>
+
       <nav>
         <ul>
           <li className="icon" id="icono-ubicacion">
