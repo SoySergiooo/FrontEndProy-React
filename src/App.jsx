@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/headerComponente'; // Ajusta las rutas según tu proyecto
-import Home from './views/Home'; // Página principal
-import NotFound from './views/NotFound'; // Página de error 404
+import Header from './components/headerComponente';
+import Home from './views/Home';
 import Carrito from './views/Carrito';
-import Pago from './views/Pago'; // Importa la nueva vista de Pago
+import Pago from './views/Pago'; // Página de pago
 
 function App() {
   return (
@@ -13,8 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/carrito" element={<Carrito />} />
-        <Route path="/pago" element={<Pago />} /> {/* Nueva ruta para Pago */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="/pago" element={<Pago />} />
       </Routes>
     </Router>
   );

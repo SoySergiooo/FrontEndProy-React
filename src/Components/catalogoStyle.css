@@ -1,4 +1,8 @@
 /* Estilo del contenedor del catálogo */
+main{
+    padding-top: 20px;
+}
+
 .wrap-productos {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Cuatro elementos por fila */
@@ -63,31 +67,55 @@
     text-align: center;
 }
 
-.art-producto .precio {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #007BFF;
-    margin-top: 10px;
-}
 
+
+/* Estilo básico del botón */
 .BotonAgregarCarrito {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
     border-radius: 25px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Hover sobre el botón */
 .BotonAgregarCarrito:hover {
-    background-color: #585858;
+    background-color: #585858; /* Fondo gris oscuro en hover */
 }
 
+/* Estilo para la animación cuando se agrega al carrito */
+.BotonAgregarCarrito.agregado {
+    background-color: white; /* Fondo azul cuando se agrega al carrito */
+    color: #333;
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 5px 15px rgba(43, 49, 54, 0.4); /* Sombra azul para dar un efecto de profundidad */
+    animation: feedbackAnim 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards; /* Efecto de rebote */
+    border: none;
+}
 
+/* Animación de feedback visual para el botón */
+@keyframes feedbackAnim {
+    0% {
+        transform: scale(1); /* Empezamos al tamaño normal */
+    }
+    40% {
+        transform: scale(1.15); /* Aumenta el tamaño un poco más */
+    }
+    60% {
+        transform: scale(0.95); /* Reduce un poco para el efecto de rebote */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño original */
+    }
+}
 
-/* ====== Media Queries ====== */
-
+/* Media Queries para diferentes tamaños de pantalla */
 @media (max-width: 1200px) {
     .wrap-productos {
         grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas */
@@ -105,3 +133,6 @@
         grid-template-columns: 1fr; /* Cambia a 1 columna */
     }
 }
+
+
+

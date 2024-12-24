@@ -52,3 +52,9 @@
 .btn-regresar:hover {
     background-color: #5a6268;
 }
+
+.btn-pago:disabled {
+    background-color: #ccc;  /* Fondo gris claro cuando está deshabilitado */
+    cursor: not-allowed;     /* Cursor de no permitido */
+    opacity: 0.6;            /* Reduce la opacidad para hacerlo ver más inactivo */
+}

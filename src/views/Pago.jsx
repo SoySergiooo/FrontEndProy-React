@@ -11,7 +11,7 @@ const Pago = () => {
     <main>
       <section id="dire-tarj">
         <div className="volver-container">
-          <Link to="/carrito">← Volver al carrito</Link>
+          <Link to="/carrito">← Volver</Link>
         </div>
         <form className="form-dir-pago">
           <DireccionComponente />
