@@ -9,7 +9,7 @@
   .carrito-vacio {
     text-align: center;
     font-size: 18px;
-    color: #555;
+    color: #333;
   }
   
   .producto-carrito {
@@ -20,7 +20,9 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #fff;
-  }
+    width: 80%; /* Ajusta el ancho al 80% */
+    margin: auto; /* Centra el contenedor */
+}
   
   .producto-imagen img {
     width: 80px;
@@ -61,9 +63,19 @@
     margin: 5px 0;
     font-size: 16px;
   }
+
+  .producto-subtotal{
+    font-weight: bold;
+  }
   
   .carrito-total {
     text-align: right;
     font-size: 20px;
     font-weight: bold;
+  }
+
+  .carrito-total {
+    width: 90%;
+
+
   }

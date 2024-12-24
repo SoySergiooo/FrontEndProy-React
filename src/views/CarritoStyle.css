@@ -1,0 +1,54 @@
+.titulo-carrito {
+    width: 80%; /* El contenedor ocupa el 80% del ancho */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding-left: 30px; /* Espaciado interno opcional */
+    padding-bottom: 10px;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+.botones-carrito {
+    display: flex; /* Flexbox para alinear los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espaciado entre los botones */
+    margin-top: 20px; /* Espaciado superior opcional */
+    margin-bottom: 20px;
+}
+
+.btn-pago {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: inline-block; /* Asegura que respete las dimensiones de botón */
+    width: auto; /* Elimina el ancho completo */
+    min-width: 120px; /* Ancho mínimo para mantener consistencia */
+}
+
+.btn-pago:hover {
+    background-color: #218838; /* Cambia de color al pasar el cursor */
+    
+}
+
+.btn-regresar {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: inline-block; /* Asegura que respete las dimensiones de botón */
+    width: auto; /* Elimina el ancho completo */
+    min-width: 120px; /* Ancho mínimo para mantener consistencia */
+}
+
+.btn-regresar:hover {
+    background-color: #5a6268;
+}

@@ -4,6 +4,7 @@ import Header from './components/headerComponente'; // Ajusta las rutas según t
 import Home from './views/Home'; // Página principal
 import NotFound from './views/NotFound'; // Página de error 404
 import Carrito from './views/Carrito';
+import Pago from './views/Pago'; // Importa la nueva vista de Pago
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/carrito" element={<Carrito />} />
+        <Route path="/pago" element={<Pago />} /> {/* Nueva ruta para Pago */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
@@ -19,9 +21,6 @@ function App() {
 }
 
 export default App;
-
-
-
 
 
 
