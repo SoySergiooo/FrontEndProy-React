@@ -10,11 +10,22 @@ const Carrito = () => {
 
   // Cargar el carrito desde el localStorage
   useEffect(() => {
-    const carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || [];
-    setCarrito(carritoGuardado);
-  }, []);
-
-  // Verificar si el carrito está vacío
+    const handleStorageChange = () => {
+      const carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || [];
+      setCarrito(carritoGuardado);
+    };
+  
+    // Escuchar el evento 'storage'
+    window.addEventListener('storage', handleStorageChange);
+  
+    // Cargar el carrito inicialmente
+    handleStorageChange();
+  
+    // Eliminar el listener cuando el componente se desmonte
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);  // Verificar si el carrito está vacío
   const isCarritoVacio = carrito.length === 0;
 
   return (

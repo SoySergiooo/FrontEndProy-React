@@ -33,16 +33,19 @@ const ProductosCarritoComponente = () => {
   const actualizarCantidad = (id, cambio) => {
     let carrito = obtenerCarritoDesdeLocalStorage();
     const item = carrito.find((producto) => producto.id === id);
-
+  
     if (item) {
       if (item.cantidad === 1 && cambio === -1) {
         carrito = carrito.filter((producto) => producto.id !== id);
       } else {
         item.cantidad = Math.max(1, item.cantidad + cambio);
       }
-
+  
       guardarCarritoEnLocalStorage(carrito);
       generarCarrito();
+  
+      // Emitir el evento 'storage' para actualizar otros componentes
+      window.dispatchEvent(new Event('storage'));
     }
   };
 
