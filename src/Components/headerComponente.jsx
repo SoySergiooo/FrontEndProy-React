@@ -47,7 +47,7 @@ const Header = () => {
       <nav>
         <ul>
           <li className="icon" id="icono-ubicacion">
-            <Link to="#Ubicanos">
+            <Link to="*">
               <img src={Ubicacion} alt="Ubicanos" className="icono-ubicacion" />
             </Link>
           </li>

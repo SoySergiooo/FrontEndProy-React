@@ -53,4 +53,15 @@ header {
 }
 main {
   padding-top: 90px; /* Igual al height del header */
+  flex: 1; /* Esto asegura que el contenido ocupe el espacio restante */
+  display: flex;
+  flex-direction: column; /* Si tienes varios elementos en el main, los pone en columna */
+}
+
+footer {
+  margin-top: auto; /* Esto asegura que el footer esté al final */
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
 }

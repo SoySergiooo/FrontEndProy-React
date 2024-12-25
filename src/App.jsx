@@ -4,6 +4,7 @@ import Header from './components/headerComponente';
 import Home from './views/Home';
 import Carrito from './views/Carrito';
 import Pago from './views/Pago'; // Página de pago
+import NotFound from './views/NotFound'; // Página para rutas no encontradas
 
 function App() {
   return (
@@ -13,14 +14,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/pago" element={<Pago />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
-
 
 
 
