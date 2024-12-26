@@ -1,14 +1,17 @@
 .login-container {
     max-width: 400px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .login-form h2 {
+  .login-form h1 {
+    font-size: 26px;
     text-align: center;
+    margin-bottom: 20px;
     color: #333;
   }
   
@@ -20,10 +23,12 @@
   
   .login-form input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 16px;
   }
   
   .login-form button {
@@ -34,6 +39,7 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-bottom: 15px;
   }
   
   .login-form button:hover {

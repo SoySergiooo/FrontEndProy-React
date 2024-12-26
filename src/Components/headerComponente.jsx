@@ -11,6 +11,7 @@ import CartFull from '../assets/images/cartFull.png';
 
 const Header = () => {
   const [carritoVacio, setCarritoVacio] = useState(true);
+  const [usuarioLogueado, setUsuarioLogueado] = useState(false);
 
   // Función para actualizar el carrito y verificar si está vacío
   const actualizarCarrito = () => {
@@ -18,8 +19,13 @@ const Header = () => {
     setCarritoVacio(carrito.length === 0);
   };
 
-  // Usamos useEffect para actualizar el carrito cuando la página carga o cuando se modifica
+  // Usamos useEffect para actualizar el carrito y el estado de login
   useEffect(() => {
+    // Verificar si el usuario está logueado
+    const loggedIn = localStorage.getItem('userLoggedIn') === 'true';
+    console.log('Estado de usuarioLogueado:', loggedIn); // Verificar si la lectura de localStorage es correcta
+    setUsuarioLogueado(loggedIn);
+
     actualizarCarrito();
 
     // Evento que se disparará cuando el localStorage se actualice
@@ -32,8 +38,9 @@ const Header = () => {
   }, []);
 
   const cerrarSesion = () => {
+    localStorage.setItem('userLoggedIn', 'false');
+    setUsuarioLogueado(false);
     console.log('Sesión cerrada');
-    return false;
   };
 
   return (
@@ -51,16 +58,20 @@ const Header = () => {
               <img src={Ubicacion} alt="Ubicanos" className="icono-ubicacion" />
             </Link>
           </li>
-          <li className="icon" id="icono-login">
-            <Link to="/login">
-              <img src={Login} alt="Login" className="icono-carrito-vacio" />
-            </Link>
+          
+          {/* Si el usuario está logueado, muestra el ícono de Logout, si no, el de Login */}
+          <li className="icon" id="icono-login-logout">
+            {usuarioLogueado ? (
+              <a href="#" onClick={cerrarSesion}>
+                <img src={Logout} alt="Cerrar Sesión" className="icono-carrito-vacio" />
+              </a>
+            ) : (
+              <Link to="/login">
+                <img src={Login} alt="Login" className="icono-carrito-vacio" />
+              </Link>
+            )}
           </li>
-          <li className="icon" id="icono-logout">
-            <a href="#" onClick={cerrarSesion}>
-              <img src={Logout} alt="Cerrar Sesión" className="icono-carrito-vacio" />
-            </a>
-          </li>
+
           {/* Muestra el ícono de carrito correspondiente */}
           {carritoVacio ? (
             <li className="icon" id="icono-carrito-vacio">

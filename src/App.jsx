@@ -7,19 +7,15 @@ import Pago from './views/Pago'; // Página de pago
 import NotFound from './views/NotFound'; // Página para rutas no encontradas
 import FooterComponente from './components/footerComponente';
 import LoginForm from "./views/LoginForm";
+import Registro from "./Components/Registro";
 
 function App() {
 
-  const [usuarios] = useState([
-    { email: "ugalvez987@gmail.com", password: "asdf1234" },
-    { email: "otroemail@gmail.com", password: "12345678" },
-  ]);
   const [currentUser, setCurrentUser] = useState(null);
 
   const handleLogin = (user) => {
     setCurrentUser(user);
-    alert(`Bienvenido, ${user.email}`);
-
+    alert(`Bienvenido, ${user.nombre}`);
   }
 
   return (
@@ -29,7 +25,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/pago" element={<Pago />} />
-        <Route path="/login" element={<LoginForm usuarios={usuarios} onLogin={handleLogin} />}/>
+        <Route path="/login" element={<LoginForm onLogin={handleLogin} />}/>
+        <Route path="/registro" element={<Registro />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <FooterComponente />
