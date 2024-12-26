@@ -70,6 +70,7 @@ function Registro() {
   return (
     <div className="registro-container">
       <h1>Registro de Usuario</h1>
+      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -127,7 +128,7 @@ function Registro() {
           onChange={handleChange}
           placeholder="Confirmar Contraseña"
         />
-        {error && <p className="error">{error}</p>}
+       
         <button type="submit">Registrar</button>
       </form>
       <div className="login-link">

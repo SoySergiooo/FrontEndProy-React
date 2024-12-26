@@ -47,10 +47,13 @@
   
   /* Estilo para mensajes de error o advertencia */
   .registro-container .error {
-    color: #ff4d4d;
-    font-size: 14px;
-    margin-top: 10px;
+    color: #ff4a4a;
     text-align: center;
+    margin-bottom: 10px;
+    background: #ffdbdb;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ffc3c3;
   }
   
   /* Estilo del enlace para cambiar a la página de login */
