@@ -30,7 +30,7 @@ const Carrito = () => {
 
   return (
     <div>
-      <HeaderComponente />
+      {/* <HeaderComponente /> */}
       <main>
         <section>
           <div className="titulo-carrito">
@@ -53,7 +53,6 @@ const Carrito = () => {
           </div>
         </section>
       </main>
-      <FooterComponente />
     </div>
   );
 };

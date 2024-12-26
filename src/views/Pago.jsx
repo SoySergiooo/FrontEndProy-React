@@ -22,7 +22,6 @@ const Pago = () => {
         </form>
       </section>
     </main>
-    <Footer />
     </div>
   );
 };

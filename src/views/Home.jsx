@@ -14,7 +14,6 @@ const Home = () => {
       <main>
         <Catalogo categoria={categoriaSeleccionada} />
       </main>
-      <Footer />
     </div>
   );
 };

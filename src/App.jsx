@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/headerComponente';
 import Home from './views/Home';
 import Carrito from './views/Carrito';
 import Pago from './views/Pago'; // Página de pago
 import NotFound from './views/NotFound'; // Página para rutas no encontradas
+import FooterComponente from './components/footerComponente';
+import LoginForm from "./views/LoginForm";
 
 function App() {
+
+  const [usuarios] = useState([
+    { email: "ugalvez987@gmail.com", password: "asdf1234" },
+    { email: "otroemail@gmail.com", password: "12345678" },
+  ]);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  const handleLogin = (user) => {
+    setCurrentUser(user);
+    alert(`Bienvenido, ${user.email}`);
+
+  }
+
   return (
     <Router>
       <Header />
@@ -14,8 +29,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/pago" element={<Pago />} />
+        <Route path="/login" element={<LoginForm usuarios={usuarios} onLogin={handleLogin} />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <FooterComponente />
     </Router>
   );
 }

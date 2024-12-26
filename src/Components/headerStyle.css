@@ -1,5 +1,5 @@
 header {
-    position: fixed; /* Fija el header en la parte superior */
+    position: sticky; /* Fija el header en la parte superior */
     top: 0;
     left: 0;
     width: 100%; /* Ocupa todo el ancho de la pantalla */
