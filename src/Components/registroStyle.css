@@ -1,34 +1,34 @@
-/* Contenedor principal para el formulario de registro */
+
 .registro-container {
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff; /* Fondo blanco para el formulario */
+    background-color: #ffffff; 
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  /* Título principal del formulario */
+  
   .registro-container h1 {
     font-size: 26px;
     text-align: center;
     margin-bottom: 20px;
-    color: #333; /* Color del texto del título */
+    color: #333;
   }
   
-  /* Estilos para los campos de entrada */
+  
   .registro-container input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 6px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    box-sizing: border-box; 
     font-size: 16px;
   }
   
-  /* Estilo para el botón de enviar */
+  
   .registro-container button {
     width: 100%;
     padding: 12px;
@@ -42,10 +42,10 @@
   }
   
   .registro-container button:hover {
-    background-color: #4b4b4b; /* Color del botón cuando se pasa el ratón */
+    background-color: #4b4b4b; 
   }
   
-  /* Estilo para mensajes de error o advertencia */
+  
   .registro-container .error {
     color: #ff4d4d;
     font-size: 14px;
@@ -53,7 +53,7 @@
     text-align: center;
   }
   
-  /* Estilo del enlace para cambiar a la página de login */
+  
   .registro-container .login-link {
     display: block;
     text-align: center;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Registro.css";
+import "./RegistroStyle.css";
 
 function Registro() {
   const [formData, setFormData] = useState({

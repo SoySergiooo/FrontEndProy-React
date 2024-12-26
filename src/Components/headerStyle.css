@@ -1,16 +1,16 @@
 header {
-    position: sticky; /* Fija el header en la parte superior */
+    position: sticky;
     top: 0;
     left: 0;
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    width: 100%; 
+    z-index: 1000; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #333333; /* Color de fondo original */
-    color: white; /* Color del texto */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra original */
+    background-color: #333333; 
+    color: white; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 header nav ul {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './NotFoundStyle.css';
-import Footer from '../components/footerComponente';
+
 
 const NotFound = () => {
   return (

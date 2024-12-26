@@ -1,6 +1,6 @@
 import React from 'react';
-import './bannerStyle.css'; // Archivo CSS para estilos específicos del banner
-import bannerImage from '../assets/images/banner.jpg'; // Asegúrate de ajustar la ruta según tu estructura
+import './bannerStyle.css'; 
+import bannerImage from '../assets/images/banner.jpg'; 
 
 const Banner = () => {
   return (

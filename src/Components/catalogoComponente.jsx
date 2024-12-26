@@ -39,7 +39,6 @@ const Catalogo = ({ categoria }) => {
     // Actualizamos el carrito en localStorage
     localStorage.setItem('carrito', JSON.stringify(carrito));
 
-    // Actualizamos el estado para el feedback visual
     setAddedProductId(producto.id);
 
     // Disparar el evento storage para que los otros componentes (Header) se actualicen

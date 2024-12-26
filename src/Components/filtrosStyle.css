@@ -1,30 +1,30 @@
 #filtros {
-    width: 100%; /* Asegura que la sección abarque todo el ancho */
-    padding: 10px 0; /* Espaciado arriba y abajo */
-    background-color: #f1f1f1; /* Fondo para distinguir los filtros */
-    border-bottom: 1px solid #ccc; /* Límite inferior */
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+    width: 100%; 
+    padding: 10px 0; 
+    background-color: #f1f1f1; 
+    border-bottom: 1px solid #ccc; 
+    box-sizing: border-box; 
 }
 
 .section-nav {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Alinea verticalmente */
+    justify-content: center; 
+    align-items: center; 
 }
 
 #opciones-productos {
-    display: flex; /* Asegura que los botones se alineen en fila */
-    justify-content: center; /* Centra horizontalmente los botones */
-    align-items: center; /* Asegura que estén centrados verticalmente */
-    margin: 0; /* Elimina márgenes predeterminados */
-    padding: 0; /* Elimina paddings predeterminados */
-    list-style: none; /* Elimina los puntos de lista */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
 }
 
 #opciones-productos li {
-    list-style: none; /* Elimina los puntos de lista */
-    display: inline-block; /* Asegura que los botones no se comporten como bloques */
-    margin: 0 10px; /* Agrega separación horizontal entre los botones */
+    list-style: none; 
+    display: inline-block; 
+    margin: 0 10px; 
 }
 
 .btn-filter {
@@ -37,7 +37,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    white-space: nowrap; 
 }
 
 .btn-filter:hover {

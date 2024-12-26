@@ -19,48 +19,48 @@ main{
 }
 
 .form-dir-pago {
-    display: flex; /* Habilita el diseño Flexbox */
-    flex-wrap: wrap; /* Permite que los componentes cambien de línea si no caben */
-    gap: 20px; /* Espaciado entre los componentes */
-    justify-content: center; /* Alinea horizontalmente en el centro */
-    align-items: flex-start; /* Alinea al inicio en el eje vertical */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: flex-start; 
 }
 
 .form-dir-pago > * {
-    flex: 1 1 calc(50% - 20px); /* Cada componente ocupa el 50% menos el espaciado */
-    max-width: 400px; /* Limita el ancho máximo */
-    min-width: 250px; /* Define un ancho mínimo */
+    flex: 1 1 calc(50% - 20px);
+    max-width: 400px;
+    min-width: 250px;
 }
 
 #boton-pago {
-    flex: 0 0 auto; /* El botón no se expande ni se contrae */
-    align-self: flex-end; /* Coloca el botón al final del contenedor */
-    margin-left: auto; /* Empuja el botón hacia la derecha */
+    flex: 0 0 auto; 
+    align-self: flex-end; 
+    margin-left: auto; 
     margin-top: 20px;
     margin-right: 20px;
     width: 200px;
-    padding: 10px 20px; /* Ajusta el tamaño del botón */
-    border: none; /* Elimina el borde si no está definido */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
 }
 
 
 
 @media screen and (max-width: 768px) {
     .form-dir-pago {
-        flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+        flex-direction: column; 
         gap: 15px;
-        align-items: center; /* Centra los componentes horizontalmente */
+        align-items: center; 
     }
 
     .form-dir-pago > * {
-        flex: 1 1 100%; /* Cada componente ocupa el 100% del ancho */
-        max-width: none; /* Elimina el ancho máximo */
+        flex: 1 1 100%; 
+        max-width: none; 
     }
 
     #boton-pago {
-        margin-left: 0; /* Elimina el margen izquierdo */
-        margin-right: 0; /* Elimina el margen derecho */
-        align-self: center; /* Centra el botón horizontalmente */
+        margin-left: 0; 
+        margin-right: 0;
+        align-self: center; 
     }
 }

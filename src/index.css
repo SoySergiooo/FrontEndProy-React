@@ -1,31 +1,31 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Garantiza que padding y border no alteren las dimensiones */
+  box-sizing: border-box; 
 }
 
-/* Asegura que el html y body abarquen todo el espacio visible */
+
 html, body {
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif; /* Define una fuente base para toda la app */
+  font-family: Arial, sans-serif; 
 }
 
-/* Contenedor principal de React (root o app) */
+
 #root, #app {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column; /* Facilita el diseño vertical de la app */
+  flex-direction: column;
 }
 
-/* Estilo básico para enlaces, evita subrayados y define color por defecto */
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Botones base */
+
 button {
   font: inherit;
   cursor: pointer;
@@ -37,8 +37,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f1f1f1;
-  font-family: Arial, sans-serif; /* Opcional: establece una fuente global */
-  box-sizing: border-box; /* Asegura un manejo consistente de márgenes y padding */
+  font-family: Arial, sans-serif; 
+  box-sizing: border-box;
 }
 
 header {
@@ -46,20 +46,20 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 75px; /* Ajusta según el alto del header */
+  height: 75px;
   background-color: #f8f9fa;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 main {
-  padding-top: 90px; /* Igual al height del header */
-  flex: 1; /* Esto asegura que el contenido ocupe el espacio restante */
+  padding-top: 90px;
+  flex: 1;
   display: flex;
-  flex-direction: column; /* Si tienes varios elementos en el main, los pone en columna */
+  flex-direction: column; 
 }
 
 footer {
-  margin-top: auto; /* Esto asegura que el footer esté al final */
+  margin-top: auto;
   background-color: #f1f1f1;
   padding: 20px;
   text-align: center;

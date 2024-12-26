@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { useAuth } from '../App'; // Usamos el hook useAuth del contexto
 import { useNavigate } from 'react-router-dom';
-import "./loginForm.css";
+import "./loginFormStyle.css";
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm = () => {
+  const { login } = useAuth(); // Obtenemos la función login desde el contexto
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -21,14 +22,10 @@ const LoginForm = ({ onLogin }) => {
     );
 
     if (userFound) {
-      // Llamar al callback en caso de login exitoso
-      onLogin(userFound); 
+      // Llamar al contexto para iniciar sesión
+      login(userFound);
 
-      // Establecer que el usuario está logueado
-      localStorage.setItem('userLoggedIn', 'true');
-      console.log('Estado después de login:', localStorage.getItem('userLoggedIn')); // Verificar que el valor se guarda correctamente
-
-      // Redirigir al Home después del login
+      // Redirigir al Home después de un login exitoso
       navigate('/');
     } else {
       setError("Credenciales incorrectas. Por favor, intenta de nuevo.");

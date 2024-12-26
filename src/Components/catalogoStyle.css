@@ -1,12 +1,12 @@
-/* Estilo del contenedor del catálogo */
 main{
-    padding-top: 20px;
+    padding-top: 0;
+    margin-top: -10px;
 }
 
 .wrap-productos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro elementos por fila */
-    gap: 20px; /* Espaciado entre elementos */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
     justify-content: center;
     margin: 0 auto;
     padding: 20px;
@@ -14,7 +14,7 @@ main{
     box-sizing: border-box;
 }
 
-/* Estilo de cada producto */
+
 .art-producto {
     background-color: white;
     border-radius: 10px;
@@ -30,14 +30,14 @@ main{
 
 .imagen {
     width: 100%;
-    height: 200px; /* Altura fija para todas las imágenes */
+    height: 200px; 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     border-radius: 5px;
     margin-bottom: 10px;
-    background-color: #f8f8f8; /* Fondo gris claro para imágenes sin carga */
+    background-color: #f8f8f8; 
 }
 
 .imagen img {
@@ -69,10 +69,10 @@ main{
 
 
 
-/* Estilo básico del botón */
+
 .BotonAgregarCarrito {
-    background-color: #333; /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
+    background-color: #333; 
+    color: #fff; 
     border-radius: 25px;
     padding: 10px 20px;
     border: none;
@@ -84,53 +84,53 @@ main{
     align-items: center;
 }
 
-/* Hover sobre el botón */
+
 .BotonAgregarCarrito:hover {
-    background-color: #585858; /* Fondo gris oscuro en hover */
+    background-color: #585858;
 }
 
-/* Estilo para la animación cuando se agrega al carrito */
+
 .BotonAgregarCarrito.agregado {
-    background-color: white; /* Fondo azul cuando se agrega al carrito */
+    background-color: white; 
     color: #333;
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-    box-shadow: 0 5px 15px rgba(43, 49, 54, 0.4); /* Sombra azul para dar un efecto de profundidad */
-    animation: feedbackAnim 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards; /* Efecto de rebote */
+    transform: scale(1.1); 
+    box-shadow: 0 5px 15px rgba(43, 49, 54, 0.4); 
+    animation: feedbackAnim 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards; 
     border: none;
 }
 
-/* Animación de feedback visual para el botón */
+
 @keyframes feedbackAnim {
     0% {
-        transform: scale(1); /* Empezamos al tamaño normal */
+        transform: scale(1); 
     }
     40% {
-        transform: scale(1.15); /* Aumenta el tamaño un poco más */
+        transform: scale(1.15); 
     }
     60% {
-        transform: scale(0.95); /* Reduce un poco para el efecto de rebote */
+        transform: scale(0.95); 
     }
     100% {
-        transform: scale(1); /* Vuelve al tamaño original */
+        transform: scale(1); 
     }
 }
 
-/* Media Queries para diferentes tamaños de pantalla */
+
 @media (max-width: 1200px) {
     .wrap-productos {
-        grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
 
 @media (max-width: 900px) {
     .wrap-productos {
-        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 600px) {
     .wrap-productos {
-        grid-template-columns: 1fr; /* Cambia a 1 columna */
+        grid-template-columns: 1fr; 
     }
 }
 

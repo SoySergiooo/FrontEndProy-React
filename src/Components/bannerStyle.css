@@ -1,19 +1,18 @@
 #banner {
-    padding-top: 0px; /* Ajusta según la altura de tu header */
+    padding-top: 0px; 
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(98vh - 80px); /* Resta la altura del header para evitar desbordamientos */
+    height: calc(85vh - 80px); 
     background-color: black;
     position: relative;
     overflow: hidden;
   }
   
-  /* Estilo de la imagen del banner */
   .banner-image {
-    width: 65%;             /* Reducir la imagen un 20% (80% del tamaño original) */
-    height: auto;           /* Mantener la proporción de la imagen */
-    max-width: 100%;        /* Asegura que la imagen no exceda el 100% del contenedor */
+    width: auto;            
+    height: calc(85vh - 80px); 
+    max-width: 100%; 
     border-radius: 20px;
   }

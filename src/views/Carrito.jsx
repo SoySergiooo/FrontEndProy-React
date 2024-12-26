@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import HeaderComponente from '../components/headerComponente';
-import FooterComponente from '../components/footerComponente';
 import ProductosCarritoComponente from '../components/productosCarritoComponente';
 import './carritoStyle.css';
 
@@ -21,7 +19,7 @@ const Carrito = () => {
     // Cargar el carrito inicialmente
     handleStorageChange();
   
-    // Eliminar el listener cuando el componente se desmonte
+    
     return () => {
       window.removeEventListener('storage', handleStorageChange);
     };
@@ -30,7 +28,6 @@ const Carrito = () => {
 
   return (
     <div>
-      {/* <HeaderComponente /> */}
       <main>
         <section>
           <div className="titulo-carrito">
